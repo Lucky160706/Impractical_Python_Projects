@@ -3,7 +3,8 @@ The Objective:  Randomly generate funny sidekick names using Python
                 code that conforms to established style guidelines
 """
 
-import sys, random
+import sys
+import random
 
 print("Welcome to the Psych 'Sidekick Name Picker.'\n")
 print("A name just like Sean would pick for Gus:\n\n")
@@ -50,10 +51,10 @@ while True:
     lastName = random.choice(last)
 
     print("\n\n")
-    print(f"{firstName} {lastName}")
+    print("{} {}".format(firstName, lastName), file = sys.stderr)
     print("\n\n")
 
-    try_again = input("\n\nTry again? (Press Enter else n to quit)\n ")
+    try_again = input("\n\nTry again? (Press Enter else n to quit)\n")
     if try_again.lower() == "n":
         break
 
